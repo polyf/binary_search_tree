@@ -183,7 +183,7 @@ class BinarySearchTree(BinarySearchTreeADT):
         return degree
 
     def height(self, key: object) -> int:
-        node = self.search(key)
+        node = self._get_node(key)
         if node is None:
             return -1
 

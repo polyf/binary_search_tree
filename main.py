@@ -18,5 +18,7 @@ if __name__ == "__main__":
     print(tree.degree(5))
     print("Testando Search")
     print(tree.search(12))
+    print("Testando Height")
+    print(tree.height(1))
 
 
