@@ -195,9 +195,19 @@ class BinarySearchTree(BinarySearchTreeADT):
         return height(node)
 
     def level(self, key: object) -> int:
-        # Objetivo: retornar o nível de um nó
-        # Retorno: o nível do nó representado pela chave. Caso não seja encontrada a chave, retornar -1.
-        pass
+        def level(node: Node, key: object, current_level: int) -> int:
+            if node is None:
+                return -1
+            if node.key == key:
+                return current_level
+
+            left_search = level(node.left, key, current_level + 1)
+            if left_search != -1:
+                return left_search
+
+            return level(node.right, key, current_level + 1)
+
+        return level(self._root, key, 0)
 
     def ancestor(self, key: object) -> str:
         # Objetivo: retornar os ancestrais (chave) lado a lado.
