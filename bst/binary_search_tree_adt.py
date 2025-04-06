@@ -1,3 +1,6 @@
+from abc import abstractmethod, ABC
+
+
 class BinarySearchTreeADT(ABC):
     @abstractmethod
     def clear(self) -> None: ...

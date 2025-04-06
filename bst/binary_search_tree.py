@@ -1,3 +1,7 @@
+from bst.binary_search_tree_adt import BinarySearchTreeADT
+from bst.node import Node
+
+
 class BinarySearchTree(BinarySearchTreeADT):
     def __init__(self) -> None:
         self._root: Node = None
