@@ -48,23 +48,20 @@ class BinarySearchTree(BinarySearchTreeADT):
     def _str_tree(self) -> str:
         def _str_tree(current: Node, is_right: bool, tree: str, ident: str) -> str:
             if current.right:
-                tree = _str_tree(current.right, True, tree, ident + (' ' * 8
-                                                                     if is_right
-                                                                     else ' |' + ' ' * 6))
+                tree = _str_tree(current.right, True, tree, ident + (' ' * 8 if is_right else ' |' + ' ' * 6))
             tree += ident + (' /' if is_right else ' \\') + "----- " + str(current) + '\n'
             if current.left:
-                tree = _str_tree(current.left, False, tree, ident + (' |' + ' ' * 6
-                                                                     if is_right
-                                                                     else ' ' * 8))
+                tree = _str_tree(current.left, False, tree, ident + (' |' + ' ' * 6 if is_right else ' ' * 8))
             return tree
 
-            tree: str = ''
-            if self._root.right:
-                tree = _str_tree(self._root.right, True, tree, '')
-            tree += str(self._root) + '\n'
-            if self._root.left:
-                tree = _str_tree(self._root.left, False, tree, '')
-            return tree
+        tree: str = ''
+        if self._root.right:
+            tree = _str_tree(self._root.right, True, tree, '')
+        tree += str(self._root) + '\n'
+        if self._root.left:
+            tree = _str_tree(self._root.left, False, tree, '')
+
+        return tree
 
     def _delete_by_copying(self, key: object) -> bool:
         parent: Node; current: Node
@@ -157,19 +154,42 @@ class BinarySearchTree(BinarySearchTreeADT):
                 if current.right: queue.append(current.right)
 
     def count_internal(self):
-        # Objetivo: retornar a quantidade de nós internos da árvore. Lembre-se que a raiz e as folhas não fazem parte.
-        # Retorno: quantidade de nós internos da árvore ou zero caso a árvore esteja vazia ou tenha somente o root.
-        pass
+        def count_internal(node):
+            if node is None:
+                return 0
+            is_internal = 1 if node.left or node.right else 0
+            return is_internal + count_internal(node.left) + count_internal(node.right)
+
+        if self.is_empty():
+            return 0
+
+        return count_internal(self._root.left) + count_internal(self._root.right)
 
     def degree(self, key: object) -> int:
-        # Objetivo: retornar o grau de um nó.
-        # Retorno: grau do nó que é representado pela chave. Caso não encontrada a chave, retornar -1.
-        pass
+        node = self.search(key)
+
+        if node is None:
+            return -1
+
+        degree = 0
+        if node.left is not None:
+            degree += 1
+        if node.right is not None:
+            degree += 1
+
+        return degree
 
     def height(self, key: object) -> int:
-        # Objetivo: retornar a altura de um nó.
-        # Retorno: altura do nó que é representada pela chave. Caso não encontrada a chave, retornar -1.
-        pass
+        node = self.search(key)
+        if node is None:
+            return -1
+
+        def height(node):
+            if node is None:
+                return -1
+            return 1 + max(height(node.left), height(node.right))
+
+        return height(node)
 
     def level(self, key: object) -> int:
         # Objetivo: retornar o nível de um nó
