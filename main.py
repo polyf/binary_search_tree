@@ -14,5 +14,8 @@ if __name__ == "__main__":
     print(tree.count_internal())
     print("Testando _str_tree:")
     print(tree.__str__())
+    print("Testando degree")
+    print(tree._root.left)
+    print(tree.degree(tree._root.left.left))
 
 

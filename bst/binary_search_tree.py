@@ -166,15 +166,13 @@ class BinarySearchTree(BinarySearchTreeADT):
         return count_internal(self._root.left) + count_internal(self._root.right)
 
     def degree(self, key: object) -> int:
-        node = self.search(key)
-
-        if node is None:
+        if key is None:
             return -1
 
         degree = 0
-        if node.left is not None:
+        if key.left is not None:
             degree += 1
-        if node.right is not None:
+        if key.right is not None:
             degree += 1
 
         return degree
