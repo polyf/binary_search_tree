@@ -15,7 +15,8 @@ if __name__ == "__main__":
     print("Testando _str_tree:")
     print(tree.__str__())
     print("Testando degree")
-    print(tree._root.left)
-    print(tree.degree(tree._root.left.left))
+    print(tree.degree(5))
+    print("Testando Search")
+    print(tree.search(12))
 
 
