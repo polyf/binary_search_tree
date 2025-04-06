@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0debbfd2-8792-4ce0-8e51-60ca5dddb524" name="Changes" comment="first commit">
+    <list default="true" id="0debbfd2-8792-4ce0-8e51-60ca5dddb524" name="Changes" comment="Correções de Sintaxe e Importações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bst/binary_search_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst/binary_search_tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bst/binary_search_tree_adt.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst/binary_search_tree_adt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bst/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst/node.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1743948266831</updated>
       <workItem from="1743948267945" duration="1846000" />
-      <workItem from="1743950141764" duration="91000" />
+      <workItem from="1743950141764" duration="728000" />
     </task>
     <task id="LOCAL-00001" summary="Base fornecida pelo professor">
       <option name="closed" value="true" />
@@ -110,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743949834612</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Correções de Sintaxe e Importações">
+      <option name="closed" value="true" />
+      <created>1743950251878</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743950251878</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base fornecida pelo professor" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="Correções de Sintaxe e Importações" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correções de Sintaxe e Importações" />
   </component>
 </project>

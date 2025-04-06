@@ -155,3 +155,29 @@ class BinarySearchTree(BinarySearchTreeADT):
                 print(current.key, end=' ')
                 if current.left: queue.append(current.left)
                 if current.right: queue.append(current.right)
+
+    def count_internal(self):
+        # Objetivo: retornar a quantidade de nós internos da árvore. Lembre-se que a raiz e as folhas não fazem parte.
+        # Retorno: quantidade de nós internos da árvore ou zero caso a árvore esteja vazia ou tenha somente o root.
+        pass
+
+    def degree(self, key: object) -> int:
+        # Objetivo: retornar o grau de um nó.
+        # Retorno: grau do nó que é representado pela chave. Caso não encontrada a chave, retornar -1.
+        pass
+
+    def height(self, key: object) -> int:
+        # Objetivo: retornar a altura de um nó.
+        # Retorno: altura do nó que é representada pela chave. Caso não encontrada a chave, retornar -1.
+        pass
+
+    def level(self, key: object) -> int:
+        # Objetivo: retornar o nível de um nó
+        # Retorno: o nível do nó representado pela chave. Caso não seja encontrada a chave, retornar -1.
+        pass
+
+    def ancestor(self, key: object) -> str:
+        # Objetivo: retornar os ancestrais (chave) lado a lado.
+        # Retorno: lista em texto com as chaves lado a lado (separadas por espaço) que representam os ancestrais.
+        # Caso não seja encontrada a chave, retornar None.
+        pass
