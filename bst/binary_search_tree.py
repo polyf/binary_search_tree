@@ -224,7 +224,7 @@ class BinarySearchTree(BinarySearchTreeADT):
             return False
 
         ancestors = []
-        if not ancestor(self._root, key, ancestors):
+        if not ancestor(self._root, key, ancestors) or len(ancestors) == 0:
             return None
 
         return ' '.join(map(str, reversed(ancestors)))
