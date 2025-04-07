@@ -22,5 +22,7 @@ if __name__ == "__main__":
     print(tree.height(1))
     print("Testando Level")
     print(tree.level(5))
+    print("Testando Ancestor")
+    print(tree.ancestor(1))
 
 

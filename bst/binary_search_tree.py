@@ -210,7 +210,21 @@ class BinarySearchTree(BinarySearchTreeADT):
         return level(self._root, key, 0)
 
     def ancestor(self, key: object) -> str:
-        # Objetivo: retornar os ancestrais (chave) lado a lado.
-        # Retorno: lista em texto com as chaves lado a lado (separadas por espaço) que representam os ancestrais.
-        # Caso não seja encontrada a chave, retornar None.
-        pass
+        def ancestor(node: Node, key: object, ancestors: list) -> bool:
+            if node is None:
+                return False
+
+            if node.key == key:
+                return True
+
+            if ancestor(node.left, key, ancestors) or ancestor(node.right, key, ancestors):
+                ancestors.append(node.key)
+                return True
+
+            return False
+
+        ancestors = []
+        if not ancestor(self._root, key, ancestors):
+            return None
+
+        return ' '.join(map(str, reversed(ancestors)))
